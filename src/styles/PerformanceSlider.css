@@ -1,0 +1,84 @@
+.performance-slider {
+  width: 1000px;
+  padding: 20px;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-button {
+  padding: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.slider-item {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.image-group {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.item-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.item-details {
+  margin-top: 20px;
+}
+
+.item-link {
+  display: flex;
+  align-items: center;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.item-link i {
+  margin-left: 5px;
+}
+.First-part{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}

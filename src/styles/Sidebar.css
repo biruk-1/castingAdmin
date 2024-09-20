@@ -1,0 +1,170 @@
+/* Sidebar Styling */
+.sidebar {
+  width: 15vw; 
+  height: 100vh;
+  background-color: #172f56;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.sidebar-brand{
+  /* display: flex;
+  justify-content: center; 
+  align-items: center;  */
+  background-color: rgb(13, 49, 108);
+ 
+}
+/* 
+.logo-image{
+  max-width: 100%;
+} */
+.sidebar .sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(13, 49, 108);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.sidebar .sidebar-title .icon_header {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  background-color: #34495e;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* User Section Dropdown Styling */
+.sidebar ul .user-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative; /* To position submenu relative to parent */
+}
+
+.sidebar ul .user-section .chevron-icon {
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.sidebar ul .sidebar-submenu {
+  background-color: #3b4f61;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  flex-direction: column;
+  
+}
+
+.sidebar ul .sidebar-submenu li {
+  padding: 10px 20px;
+  font-size: 0.9em;
+}
+
+.sidebar ul .sidebar-submenu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar ul .sidebar-submenu li:hover {
+  background-color: #2a3b4c;
+}
+
+/* Show Submenu When Active */
+.sidebar ul .user-section.active + .sidebar-submenu {
+  display: flex; /* Show when user-section is clicked */
+}
+
+/* Close and Hamburger Icon for Small Screens */
+.icon.close_icon {
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+}
+
+.icon.hamburger_icon {
+  font-size: 2em;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  color: white;
+  z-index: 100;
+}
+
+/* Responsive Sidebar */
+.sidebar-responsive {
+  transform: translateX(-100%);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2c3e50;
+  z-index: 1000;
+}
+
+/* Sidebar Visible in Responsive Mode */
+.sidebar-responsive.active {
+  transform: translateX(0);
+}
+
+/* Show Hamburger Icon in Small Screens */
+@media (max-width: 768px) {
+  .icon.hamburger_icon {
+    display: block;
+  }
+
+  .icon.close_icon {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: fixed;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+  }
+
+  .sidebar ul li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    justify-content: center;
+  }
+}

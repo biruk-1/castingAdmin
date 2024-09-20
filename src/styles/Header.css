@@ -1,0 +1,141 @@
+/* General Header Styling */
+.header {
+    background-color: #172f56; /* Background color for the header */
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 15%); /* Adjust to take up space next to the sidebar */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 15%;
+    z-index: 1000; /* Ensure header is above other elements */
+    transition: all 0.3s ease;
+    height: 100px;
+  }
+  
+  /* Make Header Full Width on Small Screens */
+  .header.active {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Menu Icon Styling */
+  .menu-icon .icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ffffff; /* Icon color for visibility */
+    transition: color 0.3s ease;
+  }
+  
+  .menu-icon .icon:hover {
+    color: #007bff; /* Hover color */
+  }
+  
+  /* Left Section Styling */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-left input[type="search"] {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1em;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .header-left input[type="search"]:focus {
+    border-color: #007bff;
+  }
+  
+  .header-left .search-icon {
+    font-size: 1.2em;
+    color: #ffffff; /* Icon color for visibility */
+    cursor: pointer;
+  }
+  
+  /* Right Section Styling */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header-right .icon {
+    font-size: 1.5em;
+    color: #ffffff; /* Icon color for visibility */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .header-right .icon:hover {
+    color: #007bff; /* Hover color */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1200px) {
+    .header {
+      width: calc(100% - 10%); /* Adjust width for medium screens */
+      left: 10%;
+    }
+  
+    .header-left input[type="search"] {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .header {
+      width: calc(100% - 5%); /* Adjust width for smaller screens */
+      left: 5%;
+    }
+  
+    .header-left input[type="search"] {
+      width: 150px;
+    }
+  
+    .header-right {
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      width: 100%;
+      left: 0;
+      padding: 10px 5px;
+    }
+  
+    .header-left, .header-right {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  
+    .header-left input[type="search"] {
+      width: calc(100% - 50px); /* Adjust width for very small screens */
+    }
+  
+    .header-right {
+      justify-content: flex-end;
+    }
+  
+    .header-right .icon {
+      font-size: 1.2em; /* Smaller icons for very small screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header-left input[type="search"] {
+      width: calc(100% - 40px); /* Further adjust width for very small screens */
+    }
+  }
+  

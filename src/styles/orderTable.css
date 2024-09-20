@@ -1,0 +1,69 @@
+/* CSS for the OrderTable component */
+
+/* Container for each order row */
+.table-row {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Container for the purchased items */
+  .purchased-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap between rows as needed */
+    margin-top: 10px; /* Space between the table row and the images */
+  }
+  
+  /* Each image in the purchased items column */
+  .purchased-items img {
+    width: 100px; /* Set the width for each image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+  }
+  
+  /* Style for the entire table */
+  .table-auto {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-auto th, .table-auto td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table-auto th {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .table-auto td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Pagination styling */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .pagination a:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .pagination .active {
+    background-color: #007bff;
+    color: white;
+  }
+  
